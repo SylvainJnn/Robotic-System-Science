@@ -1,0 +1,8 @@
+<launch>
+    <arg name="x_destination" default="-2"/>
+    <arg name="y_destination" default="-2"/>
+    <node pkg="assignment_student" type="task3.py" name="task3" output="screen">
+    </node>
+    <param name="x_destination" value="$(arg x_destination)" />
+    <param name="y_destination" value="$(arg y_destination)" />
+</launch>

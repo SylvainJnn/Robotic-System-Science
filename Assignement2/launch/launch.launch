@@ -1,0 +1,9 @@
+<launch>
+    <node  pkg= "tf" type="static_transform_publisher" name="map_to_odom" 
+    args="320 113 0 0 0 0 map odom 50" >
+    </node>
+    <!--  the previous line is used to setup correctly the fused line on the map from satelite package    -->
+    <node pkg="assignement" type="EKF.py" name="EKF" output="screen">
+    </node>
+
+</launch>
